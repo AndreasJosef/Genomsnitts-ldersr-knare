@@ -1,3 +1,6 @@
+from utils.input_helpers import get_kön, get_ålder
+from utils.calculations import calc_average
+
 # Huvudfunktion
 def main():
     
@@ -12,21 +15,10 @@ def main():
     m_ages_average = calc_average(m_åldrar_list)
 
     # Visa resultaten
-    print(f"Genomsnittsåldern för kvinnor: {f_ages_average} år")
-    print(f"Genomsnittsåldern för män: {m_ages_average} år")
+    print(f"\nGenomsnittsåldern för kvinnor: {f_ages_average} år")
+    print(f"Genomsnittsåldern för män: {m_ages_average} år\n")
 
 # Funktioner
-def calc_average(age_list):
-
-    # Förhindrar division med 0
-    if len(age_list) == 0: 
-        return 0
-    
-    # Ränka ut genomsnittet och runda till två decimaler 
-    avg = round(float(sum(age_list) / len(age_list)), 2)
-
-    return avg
-
 def mata_in_personer():
     # Listor för åldrar
     k_åldrar = []
@@ -49,32 +41,6 @@ def mata_in_personer():
             break
     
     return k_åldrar, m_åldrar
-
-def get_kön():
-    kön = ''
-    första_försök = True
-
-    while kön not in ["M", "K"]:
-
-        if första_försök != True:
-            print("Felaktig inmatning! Ange ett K eller M.")
-
-        kön = input("Ange kön (M för man, K för kvinna): ").upper()
-        
-        första_försök = False
-
-    return kön
-
-def get_ålder():
-    while True:
-        try:
-            ålder = int(input("Ange ålder: "))
-            if ålder > 0:
-                return ålder  
-            else:
-                print("Åldern måste vara ett positivt tal.")
-        except ValueError:
-            print("Felaktig inmatning! Ange ett heltal.")
 
 # Starta programmet
 if __name__ == "__main__":
