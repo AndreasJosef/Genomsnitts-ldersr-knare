@@ -22,7 +22,6 @@ Detta program beräknar genomsnittsåldern för två kategorier: kvinnor och mä
   ```
 
 2. Kör huvudprogrammet:
-
-   ```bash
-   python src/main.py
-   ```
+  ```bash
+  python src/main.py
+  ```
