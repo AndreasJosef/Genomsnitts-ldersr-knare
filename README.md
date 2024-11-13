@@ -16,8 +16,9 @@ Detta program beräknar genomsnittsåldern för två kategorier: kvinnor och mä
 - `README.md` - Översikt av applikationen och mappstrukturen.
 
 ## Användning
+1. Clone `https://github.com/AndreasJosef/Genomsnitts-ldersr-knare.git`
 
-1. Kör huvudprogrammet:
+2. Kör huvudprogrammet:
 
    ```bash
    python src/main.py
